@@ -1,0 +1,15 @@
+** In Table Per Concret Class Inheritance Mapping one table is created per concret Class. **
+
+*********************************************************************************************
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+=>This line indicate to Table Per Concret Class Inheritance Mapping.And this line write upside to Parent table.
+
+@GeneratedValue(strategy = GenerationType.AUTO) 
+=> Above line don't write in your Parent Class Because In Test Class We explicitly set Id of Parent class 
+By the use of Every Class reference.
+**********************************************************************************************
+@AttributeOverrides(@AttributeOverride(name = "vehicleName", column = @Column(name = "VEHICLE_NAME")) )
+=>This line is part of child class. This line is optional line.If you not write above line of code in your
+child class so in database one more table is created by hibernate to maintain Inheritance maping.
+If We write this line so in that case no any extra table is created in database automatically.Basically 
+By this line we override Parent table Columns in child table.

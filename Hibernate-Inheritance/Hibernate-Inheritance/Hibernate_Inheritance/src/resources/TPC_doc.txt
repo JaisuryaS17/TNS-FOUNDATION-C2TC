@@ -1,0 +1,18 @@
+** In Table Per Class Inheritance Mapping Only one table is created. **
+*********************************************************************************************
+
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+=> This line indicate to Table Per Class Inheritance Mapping.And this line write upside to Parent table
+
+********************************************************************************************
+
+@DiscriminatorColumn(name = "VEHICLE_TYPE", discriminatorType = DiscriminatorType.STRING)
+@DiscriminatorValue("Vehicle Company")
+=>This line is optional line.If you don't write above two line in your Parent table so in that case
+ Hibernate is responsible to maintain inheritance mapping And If you mention above two line in in 
+ your Parent Class so table behaviour is meaningful.
+
+************************************************************************************************
+
+@DiscriminatorValue("Bike")
+=> This line is also Part of Child Table To Meaning ful Table Behaviour.

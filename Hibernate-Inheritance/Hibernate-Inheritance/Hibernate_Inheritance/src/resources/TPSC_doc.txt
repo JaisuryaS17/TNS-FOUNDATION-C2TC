@@ -1,0 +1,11 @@
+** In Table Per Sub Class Inheritance Mapping one table is created per class **
+
+*********************************************************************************************
+@Inheritance(strategy = InheritanceType.JOINED)
+=> This line indicate to Table Per Sub Class Inheritance Mapping.And this line write upside to Parent table
+
+********************************************************************************************
+@PrimaryKeyJoinColumn(name = "VEHICLE_ID")
+=>This line is part of Child Class. If You don't write above line in your Child Class Upside to Class
+So In your Test Class You need to set Parent class Id by the use of references of all classes.
+And If you write Above line so there is no need to write above line in your Child Class.
